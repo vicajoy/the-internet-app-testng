@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Checkboxes Tests" verbose="1" parallel="tests" thread-count="2">
+
+	<test name="Checkboxes Tests - Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="CheckboxesTests">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Checkboxes Tests- Firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="CheckboxesTests">
+			</class>
+		</classes>
+	</test>
+	
+</suite>
