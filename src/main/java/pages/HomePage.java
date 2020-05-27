@@ -24,8 +24,23 @@ public class HomePage extends BasePage {
         return new DropdownPage(driver);
     }
 
+    public AlertsPage clickJavascriptAlerts() {
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
+    public MultipleWindowsPage clickMultipleWindows() {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
+    public WysiwygEditorPage clickWysiwygEditor(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
     private void clickLink(String linkText) {
-        find(By.linkText(linkText)).click();
+        click(By.linkText(linkText));
     }
 
 }

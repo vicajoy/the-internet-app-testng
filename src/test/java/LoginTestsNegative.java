@@ -1,4 +1,4 @@
-import org.testng.Assert;
+import static org.testng.Assert.*;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ public class LoginTestsNegative extends BaseTests {
 
 		var loginPage = homePage.clickFormAuthentication();
 		var secureAreaPage = loginPage.login(username, password);
-		Assert.assertTrue(secureAreaPage.getAlertText().contains(expectedErrorMessage),
+		assertTrue(secureAreaPage.getAlertText().contains(expectedErrorMessage),
 				"Alert text is incorrect.");
 	}
 }

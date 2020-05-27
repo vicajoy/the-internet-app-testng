@@ -1,9 +1,6 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,10 +12,6 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-    }
-
-    protected void openUrl(String url) {
-        driver.get(url);
     }
 
     public String getCurrentUrl() {
@@ -81,4 +74,14 @@ public class BasePage {
         return find(locator).getText();
     }
 
+    /** Wait for alert to be present and then switch to it */
+    protected Alert switchToAlert() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.alertIsPresent());
+        return driver.switchTo().alert();
+    }
+
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
 }

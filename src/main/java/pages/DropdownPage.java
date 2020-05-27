@@ -36,7 +36,7 @@ public class DropdownPage extends BasePage {
     }
 
     private Select findDropDownElement(){
-        return new Select(driver.findElement(dropdown));
+        return new Select(find(dropdown));
     }
 
 }

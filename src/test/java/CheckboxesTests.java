@@ -1,16 +1,15 @@
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import static org.testng.Assert.*;
 public class CheckboxesTests extends BaseTests {
 
 	@Test
 	public void checkboxesTests() {
 
 		var checkboxesPage = homePage.clickCheckboxes();
-		Assert.assertEquals(checkboxesPage.getCurrentUrl(), checkboxesPage.getPageUrl());
+		assertEquals(checkboxesPage.getCurrentUrl(), checkboxesPage.getPageUrl());
 		checkboxesPage.selectAllCheckboxes();
-		Assert.assertTrue(checkboxesPage.areAllCheckboxesChecked(), "Not all checkboxes are checked.");
+		assertTrue(checkboxesPage.areAllCheckboxesChecked(), "Not all checkboxes are checked.");
 		checkboxesPage.deselectCheckbox(2);
-		Assert.assertFalse(checkboxesPage.isCheckboxesChecked(2), "The checkbox is checked.");
+		assertFalse(checkboxesPage.isCheckboxesChecked(2), "The checkbox is checked.");
 	}
 }
