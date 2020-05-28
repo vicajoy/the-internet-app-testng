@@ -84,4 +84,9 @@ public class BasePage {
     public String getPageTitle() {
         return driver.getTitle();
     }
+
+    /** Press Key on locator */
+    protected void pressKey(By locator, Keys key) {
+        find(locator).sendKeys(key);
+    }
 }
