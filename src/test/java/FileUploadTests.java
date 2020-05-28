@@ -1,13 +1,12 @@
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class FileUploadTests extends BaseTests {
+public class FileUploadTests extends DataProviders {
 
-    @Test
-    public void testImageUpload() {
+    @Test(dataProvider = "files")
+    public void testFileUpload(String fileName) {
 
         var fileUploadPage = homePage.clickFileUpload();
-        String fileName = "java.jpg";
         fileUploadPage.uploadFile(fileName);
         String fileNames = fileUploadPage.getUploadedFiles();
         assertTrue(fileNames.contains(fileName),

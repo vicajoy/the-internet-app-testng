@@ -1,12 +1,10 @@
 import static org.testng.Assert.*;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class LoginTestsNegative extends BaseTests {
+public class LoginTestsNegative extends DataProviders {
 
-	@Parameters({ "username", "password", "expectedMessage" })
-	@Test(priority = 1)
+	@Test(dataProvider = "loginData")
 	public void loginTestsNegative(String username, String password, String expectedErrorMessage) {
 
 		var loginPage = homePage.clickFormAuthentication();
