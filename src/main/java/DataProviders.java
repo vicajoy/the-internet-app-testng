@@ -1,6 +1,6 @@
 import org.testng.annotations.DataProvider;
 
-public class DataProviders extends BaseTests {
+public class DataProviders extends BaseTest {
 
     @DataProvider(name = "files")
     protected static Object[][] files() {

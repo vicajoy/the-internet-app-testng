@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.List;
 
-public class CheckboxesPage extends BasePage {
+public class CheckboxesPage extends Page {
 
     private String url = "https://the-internet.herokuapp.com/checkboxes";
     private By checkbox = By.cssSelector("#checkboxes input");
@@ -14,24 +14,28 @@ public class CheckboxesPage extends BasePage {
         super(driver);
     }
 
-    public String getPageUrl(){
-        return url;
-    }
-
-    public void deselectCheckbox(Integer index){
+    /**
+     * Deselects a checkbox if it's checked
+     * @param index  int - index for the checkbox
+     */
+    public void deselectCheckbox(int index) {
         WebElement currentCheckbox = find(checkbox, index);
         if (currentCheckbox.isSelected()) {
             currentCheckbox.click();
         }
     }
 
-    /** Verify checkbox is checked */
-    public boolean isCheckboxesChecked(Integer index) {
+    /**
+     * Checks whether the checkbox is selected
+     * @param index  int - index for the checkbox
+     * @return       boolean - true if the checkbox is selected, false otherwise
+     */
+    public boolean isCheckboxesChecked(int index) {
         WebElement currentCheckbox = find(checkbox, index);
         return currentCheckbox.isSelected();
     }
 
-    /** Verify all available checkboxes are checked. If not, select them */
+    /** Selects all the checkboxes */
     public void selectAllCheckboxes() {
         List<WebElement> checkboxes = findAll(checkbox);
         for (WebElement checkbox : checkboxes) {
@@ -41,7 +45,10 @@ public class CheckboxesPage extends BasePage {
         }
     }
 
-    /** Verify all available checkboxes are checked. If at least one unchecked, return false */
+    /**
+     * Checks whether all checkboxes are selected
+     * @return       boolean - true if all checkboxes are selected, false if at least one of them is unchecked
+     */
     public boolean areAllCheckboxesChecked() {
         List<WebElement> checkboxes = findAll(checkbox);
         for (WebElement checkbox : checkboxes) {

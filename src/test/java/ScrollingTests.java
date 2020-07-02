@@ -1,8 +1,7 @@
 import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
-import static org.testng.Assert.*;
-
-public class ScrollingTests extends BaseTests {
+public class ScrollingTests extends BaseTest {
 
     @Test
     public void testScrollToTable() {

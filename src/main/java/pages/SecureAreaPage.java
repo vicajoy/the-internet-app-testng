@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SecureAreaPage extends BasePage {
+public class SecureAreaPage extends Page {
 
     private String url = "https://the-internet.herokuapp.com/secure";
     private By statusAlert = By.cssSelector("#flash");
@@ -13,14 +13,18 @@ public class SecureAreaPage extends BasePage {
         super(driver);
     }
 
-    public String getAlertText(){
+    /**
+     * Gets text from the alert bar
+     * @return             String - text of alert bar
+     */
+    public String getAlertText() {
         return getText(statusAlert);
     }
 
-    public String getPageUrl(){
-        return url;
-    }
-
+    /**
+     * Checks Logout button to be visible
+     * @return             boolean - true, if button is visible, false otherwise
+     */
     public Boolean isLogoutButtonVisible() {
         return find(logOutButton).isDisplayed();
     }

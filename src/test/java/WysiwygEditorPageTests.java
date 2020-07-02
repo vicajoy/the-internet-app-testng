@@ -1,7 +1,7 @@
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
-public class WysiwygEditorPageTests extends BaseTests {
+public class WysiwygEditorPageTests extends BaseTest {
 
     @Test
     public void testWysiwygEditor(){

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-public class HorizontalSliderPage extends BasePage {
+public class HorizontalSliderPage extends Page {
 
     private By rangeLocator = By.id("range");
     private By sliderLocator = By.tagName("input");
@@ -13,7 +13,10 @@ public class HorizontalSliderPage extends BasePage {
         super(driver);
     }
 
-    /** Move slider to specified value */
+    /**
+     * Moves slider to specified value
+     * @param value      String - value of the slider
+     */
     public void setSliderTo(String value) {
         int steps = (int) (Double.parseDouble(value) / 0.5);
         pressKey(sliderLocator, Keys.ENTER);
@@ -22,7 +25,10 @@ public class HorizontalSliderPage extends BasePage {
         }
     }
 
-    /** Getting slider value */
+    /**
+     * Gets the slider current value
+     * @return      String - text of slider value
+     */
     public String getSliderValue() {
         return getText(rangeLocator);
     }

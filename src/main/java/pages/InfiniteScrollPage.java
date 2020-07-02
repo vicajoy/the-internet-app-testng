@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-public class InfiniteScrollPage extends BasePage {
+public class InfiniteScrollPage extends Page {
 
     By textBlocks = By.className("jscroll-added");
 
@@ -14,7 +14,7 @@ public class InfiniteScrollPage extends BasePage {
 
     /**
      * Scrolls until paragraph with index specified
-     * @param index starts at 1
+     * @param index     int - index of the paragraph, starts at 1
      */
     public void scrollToParagraph(int index) {
         String script = "window.scrollTo(0, document.body.scrollHeight)";
@@ -25,6 +25,10 @@ public class InfiniteScrollPage extends BasePage {
         }
     }
 
+    /**
+     * Gets the number of displayed paragraphs
+     * @return           int - count of displayed paragraphs
+     */
     private int getNumberOfParagraphsPresent() {
         return findAll(textBlocks).size();
     }

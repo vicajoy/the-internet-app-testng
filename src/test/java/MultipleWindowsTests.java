@@ -1,7 +1,7 @@
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
-public class MultipleWindowsTests extends BaseTests {
+public class MultipleWindowsTests extends BaseTest {
 
     @Test
     public void newWindowTest() {

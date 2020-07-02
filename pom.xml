@@ -27,6 +27,12 @@
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
             <version>3.141.59</version>
         </dependency>
@@ -37,10 +43,5 @@
             <version>3.141.59</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.applitools</groupId>
-            <artifactId>eyes-selenium-java3</artifactId>
-            <version>3.162.0</version>
-        </dependency>
     </dependencies>
 </project>

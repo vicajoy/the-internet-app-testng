@@ -1,7 +1,7 @@
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
-public class AlertsTests extends BaseTests {
+public class AlertsTests extends BaseTest {
 
     @Test
     public void testAcceptAlert(){

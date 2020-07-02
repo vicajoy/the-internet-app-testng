@@ -2,13 +2,12 @@ import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class DropdownTests extends BaseTests {
+public class DropdownTests extends BaseTest {
 
     @Test
     public void testSelectOptionFromDropdown() {
 
         var dropdownPage = homePage.clickDropdown();
-        assertEquals(dropdownPage.getCurrentUrl(), dropdownPage.getPageUrl());
 
         String option = "Option 1";
         dropdownPage.selectOption(option);

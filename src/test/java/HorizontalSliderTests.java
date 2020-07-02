@@ -1,8 +1,7 @@
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.*;
 
-public class HorizontalSliderTests extends BaseTests {
+public class HorizontalSliderTests extends BaseTest {
 
     @Test
     public void sliderTest() {
