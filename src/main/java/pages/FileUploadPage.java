@@ -20,7 +20,7 @@ public class FileUploadPage extends Page {
 
     /**
      * Provides path of file to the form then clicks Upload button
-     * @return       String - file name that is being passed to the absolute path
+     * @param fileName     String - file name that is being passed to the absolute path
      */
     public void uploadFile(String fileName) {
         String absolutePathOfFile = System.getProperty("user.dir") + "/src/main/resources/files/" + fileName;
@@ -30,7 +30,7 @@ public class FileUploadPage extends Page {
 
     /**
      * Gets the text of uploaded files
-     * @return       String - text of uploaded files
+     * @return      String - text of uploaded files
      */
     public String getUploadedFiles() {
         return getText(uploadedFiles);

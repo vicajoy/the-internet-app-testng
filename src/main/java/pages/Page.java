@@ -109,7 +109,8 @@ public abstract class Page {
         return find(locator).getText();
     }
 
-    /** Waits for alert to be present and then switch to it
+    /**
+     * Waits for alert to be present and then switch to it
      * @return		   Alert - the alert to work with
      */
     protected Alert switchToAlert() {
@@ -118,15 +119,18 @@ public abstract class Page {
         return driver.switchTo().alert();
     }
 
-    /** Gets the current page title
+    /**
+     * Gets the current page title
      * @return		   String - the page title
      */
     public String getPageTitle() {
         return driver.getTitle();
     }
 
-    /** Presses Key on the element
+    /**
+     * Presses Key on the element
      * @param locator  By - locator for the element
+     * @param key      Keys - key to be pressed on the keyboard
      */
     protected void pressKey(By locator, Keys key) {
         find(locator).sendKeys(key);

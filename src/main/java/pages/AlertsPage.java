@@ -51,7 +51,10 @@ public class AlertsPage extends Page {
         return alert.getText();
     }
 
-    /** Dismisses an alert */
+    /**
+     * Enters text to the alert
+     * @param text    String - text to be entered
+     */
     public void enterAlertText(String text) {
         Alert alert = switchToAlert();
         alert.sendKeys(text);
