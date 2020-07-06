@@ -1,4 +1,6 @@
 import static org.testng.Assert.*;
+
+import base.BaseTest;
 import org.testng.annotations.Test;
 
 public class AlertsTests extends BaseTest {

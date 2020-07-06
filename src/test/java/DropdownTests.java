@@ -1,4 +1,6 @@
 import static org.testng.Assert.*;
+
+import base.BaseTest;
 import org.testng.annotations.Test;
 import java.util.List;
 

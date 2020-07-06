@@ -1,3 +1,4 @@
+import base.BaseTest;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;

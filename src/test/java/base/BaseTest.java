@@ -1,9 +1,10 @@
+package base;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import pages.HomePage;
 
 
-public class BaseTest {
+public abstract class BaseTest {
 
     protected WebDriver driver;
     protected HomePage homePage;

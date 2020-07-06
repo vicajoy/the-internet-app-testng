@@ -1,3 +1,4 @@
+package base;
 import org.testng.annotations.DataProvider;
 
 public class DataProviders extends BaseTest {
