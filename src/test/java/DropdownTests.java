@@ -1,11 +1,13 @@
 import static org.testng.Assert.*;
 
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 import java.util.List;
 
 public class DropdownTests extends BaseTest {
 
+    @Feature(value = "Dropdowns")
     @Test
     public void testSelectOptionFromDropdown() {
 
@@ -18,6 +20,7 @@ public class DropdownTests extends BaseTest {
         assertTrue(selectedOptions.contains(option), "Option is not selected.");
     }
 
+    @Feature(value = "Dropdowns")
     @Test
     public void testAddMultipleAttributeToDropdown() {
 

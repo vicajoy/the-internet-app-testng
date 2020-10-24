@@ -1,10 +1,12 @@
 import static org.testng.Assert.*;
 
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
 public class AlertsTests extends BaseTest {
 
+    @Feature(value = "Alerts")
     @Test
     public void testAcceptAlert(){
         var alertsPage = homePage.clickJavascriptAlerts();
@@ -14,6 +16,7 @@ public class AlertsTests extends BaseTest {
                 "Results text is incorrect.");
     }
 
+    @Feature(value = "Alerts")
     @Test
     public void testGetAlertText(){
         var alertsPage = homePage.clickJavascriptAlerts();

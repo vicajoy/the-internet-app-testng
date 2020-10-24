@@ -1,9 +1,11 @@
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class HoverTests extends BaseTest {
 
+    @Feature(value = "Hover")
     @Test
     public void testHoverUserOne() {
         var hoversPage = homePage.clickHovers();

@@ -1,10 +1,12 @@
 import static org.testng.Assert.*;
 
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
 public class MultipleWindowsTests extends BaseTest {
 
+    @Feature(value = "Multiple Windows")
     @Test
     public void newWindowTest() {
 

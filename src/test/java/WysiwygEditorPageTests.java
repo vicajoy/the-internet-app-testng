@@ -1,9 +1,11 @@
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class WysiwygEditorPageTests extends BaseTest {
 
+    @Feature(value = "Wysiwyg Editor")
     @Test
     public void testWysiwygEditor(){
         var editorPage = homePage.clickWysiwygEditor();

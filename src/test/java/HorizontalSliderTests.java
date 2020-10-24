@@ -1,9 +1,11 @@
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class HorizontalSliderTests extends BaseTest {
 
+    @Feature(value = "Horizontal Slider")
     @Test
     public void sliderTest() {
 
