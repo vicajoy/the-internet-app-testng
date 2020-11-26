@@ -1,15 +1,13 @@
-This repository includes automated tests for [https://the-internet.herokuapp.com](https://the-internet.herokuapp.com) 
-website.
+This repository includes automated tests for [The Internet](https://the-internet.herokuapp.com) application.
+I have chosen this website as it includes frequently used elements and pieces of functionality in web development.
 
-## Packages
-The project uses the following packages:
-* Selenium WebDriver 3.141.59
-* ChromeDriver 86.0.4240.22
-* GeckoDriver 0.26.0
-* Java JDK 11 or higher
-* Apache Maven 3.6.3
-* TestNG 6.14.3
-* Allure 2.10.0
+## Languages and Frameworks
+The project uses the following languages and frameworks:
+* Java 11 as the programming language
+* TestNG as the test framework
+* Selenium WebDriver as the web browser automation framework
+* Allure Report as the reporting library
+* WebDriverManager as the Selenium binaries management
 
 ## Author
 Vica Markosyan
